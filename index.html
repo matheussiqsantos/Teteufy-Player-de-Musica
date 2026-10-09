@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player de Música - Teteufy</title>
+  
+  <!-- Ícones do Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="player-card">
+    <!-- Imagem de Capa -->
+    <div class="album-container">
+      <span id="status-badge" class="badge">Pausado</span>
+      <img id="album-cover" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80" alt="Capa do Álbum">
+    </div>
+
+    <!-- Informações da Música -->
+    <div class="song-info">
+      <h2 id="song-title">Musica Boa</h2>
+      <p id="artist-name">SESI Beats</p>
+    </div>
+
+    <!-- Barra de Progresso -->
+    <div class="progress-container">
+      <input type="range" id="progress-bar" value="0" min="0" max="100">
+      <div class="time-stamps">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <!-- Controles Principais -->
+    <div class="controls">
+      <button id="btn-prev" title="Anterior">
+        <i class="ph-fill ph-skip-back"></i>
+      </button>
+
+      <button id="btn-play-pause" class="btn-play" title="Reproduzir / Pausar">
+        <i id="play-icon" class="ph-fill ph-play"></i>
+      </button>
+
+      <button id="btn-next" title="Próxima">
+        <i class="ph-fill ph-skip-forward"></i>
+      </button>
+    </div>
+
+    <!-- Controle de Volume -->
+    <div class="volume-container">
+      <i id="volume-icon" class="ph-fill ph-speaker-high"></i>
+      <input type="range" id="volume-bar" min="0" max="100" value="80">
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
